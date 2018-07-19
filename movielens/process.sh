@@ -19,8 +19,7 @@ python preprocess.py \
   --eval_score_threshold 4.5 \
   --num_ranking_candidate_movie_ids 1000 \
   --partition_random_seed 0 \
-  --cloud \
-  --max_num_workers 10
-
+  --cloud 
+  
 echo "=== Preprocessing Complete ==="
 
