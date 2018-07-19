@@ -322,6 +322,7 @@ class BuildExampleFn(beam.DoFn):
 @beam.ptransform_fn
 def _Shuffle(pcoll):  # pylint: disable=invalid-name
   """Shuffles a PCollection."""
+  import random
   return (pcoll
           | 'PairWithRand' >> beam.Map(lambda x: (random.random(), x))
           | 'GroupByRand' >> beam.GroupByKey()
@@ -476,6 +477,8 @@ def main(argv=None):
             os.path.abspath(os.path.join(
                 os.path.dirname(__file__),
                 'setup.py')),
+        '--save_main_session':
+            True
     }
     pipeline_options = beam.pipeline.PipelineOptions(flags=[], **options)
   else:
