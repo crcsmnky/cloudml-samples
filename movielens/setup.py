@@ -17,8 +17,8 @@ import setuptools
 NAME = 'movielens'
 VERSION = '1.0'
 SIX='six==1.10.0'
-TENSORFLOW='tensorflow==1.3.0'
-TENSORFLOW_TRANSFORM='tensorflow-transform==0.3.1'
+TENSORFLOW='tensorflow==1.4.0'
+TENSORFLOW_TRANSFORM='tensorflow-transform==0.4.0'
 
 if __name__ == '__main__':
   setuptools.setup(name=NAME, version=VERSION, packages=['trainer', 'preproc'],
