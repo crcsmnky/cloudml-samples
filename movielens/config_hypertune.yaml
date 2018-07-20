@@ -1,7 +1,7 @@
 trainingInput:
-  scaleTier: PREMIUM_1
-  # scaleTier: CUSTOM
-  # masterType: standard_gpu
+  # scaleTier: PREMIUM_1
+  scaleTier: CUSTOM
+  masterType: standard_gpu
   hyperparameters:
     goal: MAXIMIZE
     hyperparameterMetricTag: recall_at_10
