@@ -5,7 +5,7 @@ BUCKET="gs://${PROJECT}-cmle"
 GCS_PATH="${BUCKET}/movielens"
 GCS_TRAINING_INPUT_DIR="gs://sndp-next-bucket/movielens"
 # PREPROCESS_OUTPUT="${GCS_PATH}/movielens_$(date +%Y%m%d_%H%M%S)"
-PREPROCESS_OUTPUT="${GCS_PATH}/movielens_20180719_231341"
+PREPROCESS_OUTPUT="${GCS_PATH}/${1}"
 
 echo "=== Submitting Training Jobs ==="
 
