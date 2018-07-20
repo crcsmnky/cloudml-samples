@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROJECT=sndp-next
-BUCKET="gs://${PROJECT}-ml"
+BUCKET="gs://${PROJECT}-cmle"
 GCS_PATH="${BUCKET}/movielens"
 GCS_TRAINING_INPUT_DIR="gs://sndp-next-bucket/movielens"
 PREPROCESS_OUTPUT="${GCS_PATH}/movielens_$(date +%Y%m%d_%H%M%S)"
@@ -20,6 +20,6 @@ python preprocess.py \
   --num_ranking_candidate_movie_ids 1000 \
   --partition_random_seed 0 \
   --cloud 
-  
+
 echo "=== Preprocessing Complete ==="
 
